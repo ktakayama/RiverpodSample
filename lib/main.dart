@@ -29,17 +29,20 @@ class SampleList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var samples = {
+      'StateProviderSample': () => const StateProviderSample(),
+    };
     return Scaffold(
         appBar: AppBar(title: const Text('List')),
         body: ListView(
-          children: [
-            OutlinedButton(
-                onPressed: () => Navigator.of(context)
-                        .push(MaterialPageRoute(builder: (context) {
-                      return const StateProviderSample();
-                    })),
-                child: const Text('next'))
-          ],
+          children: samples.keys
+              .map((e) => OutlinedButton(
+                  onPressed: () => Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) {
+                        return samples[e]!();
+                      })),
+                  child: Text(e)))
+              .toList(),
         ));
   }
 }
