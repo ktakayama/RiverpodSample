@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_sample/state_notifier_provider_sample.dart';
 import 'package:riverpod_sample/state_provider_sample.dart';
 
 void main() {
@@ -31,6 +32,7 @@ class SampleList extends StatelessWidget {
   Widget build(BuildContext context) {
     var samples = {
       'StateProviderSample': () => const StateProviderSample(),
+      'StateNotifierProviderSample': () => const StateNotifierProviderSample(),
     };
     return Scaffold(
         appBar: AppBar(title: const Text('List')),
