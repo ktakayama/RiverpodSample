@@ -14,7 +14,7 @@ final configProvider = FutureProvider((ref) async {
 });
 
 class FutureProviderSample extends ConsumerWidget {
-  const FutureProviderSample({Key? key}) : super(key: key);
+  const FutureProviderSample({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

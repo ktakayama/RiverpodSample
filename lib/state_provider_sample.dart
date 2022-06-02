@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 final myProvider = StateProvider((_) => 0);
 
 class StateProviderSample extends ConsumerWidget {
-  const StateProviderSample({Key? key}) : super(key: key);
+  const StateProviderSample({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
