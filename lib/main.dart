@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_sample/change_notifier_provider.dart';
 import 'package:riverpod_sample/consumer_sample.dart';
 import 'package:riverpod_sample/future_provider_sample.dart';
+import 'package:riverpod_sample/provider_sample.dart';
 import 'package:riverpod_sample/state_notifier_provider_sample.dart';
 import 'package:riverpod_sample/state_provider_sample.dart';
 
@@ -34,6 +35,7 @@ class SampleList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var samples = {
+      'ProviderSample': () => const ProviderSample(),
       'StateProviderSample': () => const StateProviderSample(),
       'StateNotifierProviderSample': () => const StateNotifierProviderSample(),
       'ChangeNotifierProviderSample': () =>
