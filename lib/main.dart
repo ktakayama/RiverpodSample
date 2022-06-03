@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_sample/change_notifier_provider.dart';
+import 'package:riverpod_sample/consumer_sample.dart';
 import 'package:riverpod_sample/future_provider_sample.dart';
 import 'package:riverpod_sample/state_notifier_provider_sample.dart';
 import 'package:riverpod_sample/state_provider_sample.dart';
@@ -38,6 +39,7 @@ class SampleList extends StatelessWidget {
       'ChangeNotifierProviderSample': () =>
           const ChangeNotifierProviderSample(),
       'FutureProviderSample': () => const FutureProviderSample(),
+      'ConsumerSample': () => const ConsumerSample(),
     };
     return Scaffold(
         appBar: AppBar(title: const Text('List')),
