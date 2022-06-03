@@ -21,7 +21,7 @@ class FutureProviderSample extends ConsumerWidget {
     final config = ref.watch(configProvider);
 
     return Scaffold(
-        appBar: AppBar(title: const Text('StateProviderSample')),
+        appBar: AppBar(title: const Text('FutureProviderSample')),
         body: config.when(
             loading: () => const CircularProgressIndicator(),
             error: (error, stack) => Text('Error: $error'),
