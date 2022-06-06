@@ -17,12 +17,17 @@ class ProviderSample extends ConsumerWidget {
     final disposeValue = ref.watch(dsiposeProvider);
     final randomValue = ref.watch(randomProvider);
     final randomDoubleValue = ref.watch(randomDoubleProvider);
+    final randomSelectValue =
+        ref.watch(randomProvider.select((value) => value > 50 ? value : 0));
     return Scaffold(
         appBar: AppBar(title: const Text('FutureProviderSample')),
-        body: Center(
-            child: Text(
-                'sampleValue: $sampleValue\ndisposeValue: $disposeValue\nrandomValue: $randomValue\nrandomDouble: $randomDoubleValue',
-                textScaleFactor: 1.8)),
+        body: Center(child: Text('''
+sampleValue: $sampleValue
+disposeValue: $disposeValue
+randomValue: $randomValue
+randomDouble: $randomDoubleValue
+randomSelect: $randomSelectValue
+''', textScaleFactor: 1.8)),
         floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.refresh),
           onPressed: () => ref
