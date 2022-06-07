@@ -9,6 +9,9 @@ class StateProviderSample extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final count = ref.watch(myProvider);
+    ref.listen(myProvider, (previous, next) {
+      debugPrint('$previous to $next');
+    });
 
     return Scaffold(
       appBar: AppBar(title: const Text('StateProviderSample')),
